@@ -1,0 +1,28 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "engines": {
+    "node": "12.22.1",
+    "npm": "6.14.12"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.19.0",
+    "uuid-v4": "^0.1.0"
+  },
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^2.0.16",
+    "sequelize-cli": "^6.4.1"
+  },
+  "private": true
+}
