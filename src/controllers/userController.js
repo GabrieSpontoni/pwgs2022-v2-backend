@@ -2,8 +2,6 @@ const { validationResult, matchedData } = require("express-validator");
 const bcrypt = require("bcrypt");
 
 const User = require("../models/user");
-// const State = require("../models/isolated_task");
-// const Ad = require("../models/ad");
 
 const info = async (req, res) => {
   const { token } = req.query;

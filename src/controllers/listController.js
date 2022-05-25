@@ -1,6 +1,3 @@
-const { Op } = require("sequelize");
-const UUID = require("uuid-v4");
-
 const User = require("../models/user");
 const List = require("../models/list");
 const ListTask = require("../models/list_tasks");
@@ -159,7 +156,7 @@ const editAction = async (req, res) => {
       },
     }
   )
-    .then((result) => {
+    .then(() => {
       res.status(200).json({ message: "List edited" });
     })
     .catch((err) => {

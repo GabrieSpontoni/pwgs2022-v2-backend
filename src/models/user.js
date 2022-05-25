@@ -1,8 +1,6 @@
 const { DataTypes } = require("sequelize");
 
 const sequelize = require("../../src/database/instances/database");
-// const IsolatedTask = require("./isolated_task");
-// const List = require("./list");
 
 const User = sequelize.define(
   "User",
@@ -25,8 +23,5 @@ const User = sequelize.define(
     tableName: "users",
   }
 );
-
-// IsolatedTask.belongsTo(User, { foreignKey: "userId" });
-// List.belongsTo(User, { foreignKey: "userId" });
 
 module.exports = User;

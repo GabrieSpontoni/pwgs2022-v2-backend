@@ -2,8 +2,8 @@ const { DataTypes } = require("sequelize");
 
 const sequelize = require("../../src/database/instances/database");
 
-const ListTask = require("../models/list_tasks");
-const User = require("../models/user");
+const ListTask = require("./list_tasks");
+const User = require("./user");
 
 const List = sequelize.define(
   "List",

@@ -1,6 +1,3 @@
-const { Op } = require("sequelize");
-const UUID = require("uuid-v4");
-
 const User = require("../models/user");
 const List = require("../models/list");
 const ListTask = require("../models/list_tasks");
@@ -97,7 +94,7 @@ const deleteAction = async (req, res) => {
       id: req.body.id,
     },
   })
-    .then((result) => {
+    .then(() => {
       res.status(200).json({ message: "Task deleted" });
     })
     .catch((err) => {
@@ -111,16 +108,15 @@ const editAction = async (req, res) => {
     where: {
       listTaskId: req.body.id,
     },
-  }).then(async (result) => {
+  }).then(async () => {
     const { tags } = req.body;
     tags.forEach(async (tag, index) => {
       await ListTaskTag.create({
         listTaskId: req.body.id,
         tagId: tag,
       })
-        .then(async (result) => {
+        .then(async () => {
           if (index === tags.length - 1) {
-            // res.status(200).json({ message: "Tags added", data: result });
             await ListTask.update(
               {
                 status: req.body.status,
@@ -133,7 +129,7 @@ const editAction = async (req, res) => {
                 },
               }
             )
-              .then((result) => {
+              .then(() => {
                 res.status(200).json({ message: "Task of list edited" });
               })
               .catch((err) => {

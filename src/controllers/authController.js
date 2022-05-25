@@ -93,8 +93,6 @@ const login = async (req, res) => {
         error: err,
       });
     });
-
-  // res.status(200).json({ message: "Login" });
 };
 
 module.exports = {
